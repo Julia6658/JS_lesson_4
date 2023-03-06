@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сервис Комментариев</title>
+    
+</head>
+
+<body>
+    <style>
+        body {background-color: #0e0e10; color: #fff;}
+        #form {display: flex; flex-direction:column; }
+        #imgField > img {max-width: 120px;}
+        input {margin-bottom: 20px;}
+        .formApp {column-gap: 20px;}
+        button[type=submit] {margin: 20px 0;}
+        .formApp {max-width: 80%; margin:0 auto;}
+    </style>
+
+<div class="formApp" style="display:flex;">  
+    <form id="form">
+        <label>ФИО</label>
+        <input type="text" id="userName" value>
+        
+        <label>Ссылка на аватар</label>
+        <input type="text" id="fileInput">
+
+        <textarea id="commentInput"></textarea>
+        <button type=submit>Отправить</button>
+    </form>
+
+    <div id='chat'>
+        <h3>Чат</h3>
+        <div id="avatarField">
+            <span id="imgField"><img src=''></span>
+            <span id="nameField"></span>
+        </div>
+        <div id="commentField"></div>
+
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
