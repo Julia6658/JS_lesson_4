@@ -15,13 +15,13 @@ userName.addEventListener("focusout", function() {
     for (let i = 0; i <  words.length; i++) {
         words[i] = words[i][0].toUpperCase() + words[i].substr(1);
     }
-    
+
     this.value = words.join(" ");
 });
 
 function checkSpam(textInput) {
     let str = textInput.value;
-    let newString = str.replace(/viagra|XXX/i, "***");
+    let newString = str.replace(/viagra|XXX/ig, "***");
     textField.textContent = newString;   
    
 }
