@@ -10,29 +10,36 @@
 
 <body>
     <style>
-        body {background-color: #0e0e10; color: #fff;}
-        #form {display: flex; flex-direction:column; }
+        body {background-color: #151529; color: #fff; font-family: Arial, sans-serif}
+        body * {box-sizing: border-box;}
+        input, button {height: 30px;}
+        #form {display: flex; flex-direction:column;  width: 30%;}
         #imgField > img {max-width: 120px;}
-        input {margin-bottom: 20px;}
-        .formApp {column-gap: 20px;}
-        button[type=submit] {margin: 20px 0;}
-        .formApp {max-width: 80%; margin:0 auto;}
+        body input, body textarea {border: 1px solid #148bec; margin-bottom: 20px; color: #fff; background: transparent;}
+        .formApp {column-gap: 80px;}
+        button[type=submit] {margin: 20px 0; cursotr:pointer}
+        .formApp {max-width: 80%; margin:0 auto; padding: 40px 0;}
+        label {margin-bottom:5px;}
+        h3 {margin:0;}
+        h4 {color: #148bec}
     </style>
 
 <div class="formApp" style="display:flex;">  
+    
     <form id="form">
+        <h4>Оставьте ваш комментарий</h4>
         <label>ФИО</label>
         <input type="text" id="userName" value>
         
         <label>Ссылка на аватар</label>
         <input type="text" id="fileInput">
-
+        <label>Оставьте комментарий</label>
         <textarea id="commentInput"></textarea>
         <button type=submit>Отправить</button>
     </form>
 
     <div id='chat'>
-        <h3>Чат</h3>
+        <h4>Чат</h4>
         <div id="avatarField">
             <span id="imgField"><img src=''></span>
             <span id="nameField"></span>
